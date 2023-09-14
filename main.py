@@ -1,4 +1,5 @@
 import random
+import time
 
 def total(cards):
     total = 0
@@ -56,6 +57,7 @@ while continue_game:
         computer_rounds = 0
 
         computer_total = total(computer_cards)
+        time.sleep(1)
         print("Computer Turn")
         print(f"Computer card 1: {computer_card_1}")
         print(f"Computer card 2: {computer_card_2}")
@@ -65,7 +67,9 @@ while continue_game:
             computer_cards.append(computer_new_card)
             computer_total = total(computer_cards)
             computer_rounds += 1
+            time.sleep(.5)
             print(f"Computer have added {computer_rounds} card/s")
+            time.sleep(.5)
             print(f"Computer got a {computer_new_card}")
 
         print(f"Computer Total: {computer_total}")
